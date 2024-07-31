@@ -39,6 +39,8 @@ namespace ilkDeneme
             services.AddScoped<IMahalleService, MahalleService>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ILoggingService, LoggingService>();
+            services.AddScoped<LogService>();   
             services.AddDbContext<ApplicationDbContext>(options =>
        
 

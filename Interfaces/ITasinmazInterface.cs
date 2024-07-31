@@ -8,10 +8,11 @@ namespace ilkDeneme.Services
     {
         Task<List<Tasinmaz>> GetAllTasinmazlarAsync();
         Task<Tasinmaz> GetTasinmazByIdAsync(int id);
-        Task<Tasinmaz> AddTasinmazAsync(Tasinmaz tasinmaz);
-        Task<Tasinmaz> UpdateTasinmazAsync(Tasinmaz tasinmaz);
-        Task DeleteTasinmazAsync(int id);
-        Task DeleteTasinmazlarAsync(List<int> ids);
+        Task<Tasinmaz> AddTasinmazAsync(Tasinmaz tasinmaz, int kullaniciId, string ipAddress);
+
+        Task<Tasinmaz> UpdateTasinmazAsync(Tasinmaz tasinmaz, int kullaniciId, string ipAddress);
+        Task DeleteTasinmazAsync(int id, int kullaniciId, string ipAddress);
+        Task DeleteTasinmazlarAsync(List<int> ids, int kullaniciId, string ipAddress);
 
         Task<IEnumerable<Tasinmaz>> GetByKullaniciIdAsync(int kullaniciId);
 

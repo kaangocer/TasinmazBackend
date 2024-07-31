@@ -133,3 +133,4 @@ C:\Users\karik\OneDrive\Masaüstü\Yeni klasör\ilkDeneme\ilkDeneme\bin\Debug\ne
 C:\Users\karik\OneDrive\Masaüstü\Yeni klasör\ilkDeneme\ilkDeneme\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\karik\OneDrive\Masaüstü\Yeni klasör\ilkDeneme\ilkDeneme\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\karik\OneDrive\Masaüstü\Yeni klasör\ilkDeneme\ilkDeneme\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\karik\OneDrive\Masaüstü\Yeni klasör\ilkDeneme\ilkDeneme\obj\Debug\netcoreapp3.1\ilkDeneme.sourcelink.json

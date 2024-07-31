@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ilkDeneme.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240730090053_AddLogTable")]
+    partial class AddLogTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,18 +33,6 @@ namespace ilkDeneme.Migrations
                     b.HasKey("DurumId");
 
                     b.ToTable("Durumlar");
-
-                    b.HasData(
-                        new
-                        {
-                            DurumId = 1,
-                            DurumAdi = "Başarılı"
-                        },
-                        new
-                        {
-                            DurumId = 2,
-                            DurumAdi = "Başarısız"
-                        });
                 });
 
             modelBuilder.Entity("ilkDeneme.Entities.Concrete.Il", b =>
@@ -93,28 +83,6 @@ namespace ilkDeneme.Migrations
                     b.HasKey("IslemTipId");
 
                     b.ToTable("IslemTipleri");
-
-                    b.HasData(
-                        new
-                        {
-                            IslemTipId = 1,
-                            IslemAdi = "Yeni Kayıt"
-                        },
-                        new
-                        {
-                            IslemTipId = 2,
-                            IslemAdi = "Güncelleme"
-                        },
-                        new
-                        {
-                            IslemTipId = 3,
-                            IslemAdi = "Silme"
-                        },
-                        new
-                        {
-                            IslemTipId = 4,
-                            IslemAdi = "Giriş"
-                        });
                 });
 
             modelBuilder.Entity("ilkDeneme.Entities.Concrete.Log", b =>

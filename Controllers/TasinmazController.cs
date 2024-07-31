@@ -9,6 +9,7 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using ilkDeneme.DTOs;
+using Microsoft.AspNetCore.Http;
 
     namespace ilkDeneme.Controllers
     {
@@ -18,11 +19,12 @@ using ilkDeneme.DTOs;
         public class TasinmazController : ControllerBase
         {
             private readonly ITasinmazInterface _tasinmazService;
-
-            public TasinmazController(ITasinmazInterface tasinmazService)
+        private readonly ILoggingService _loggingService;
+        public TasinmazController(ITasinmazInterface tasinmazService, ILoggingService loggingService)
             {
                 _tasinmazService = tasinmazService;
-            }
+            _loggingService = loggingService;
+        }
 
 
 
@@ -55,7 +57,7 @@ using ilkDeneme.DTOs;
 
             return Ok(tasinmazlar);
         }
-       
+
 
 
 
@@ -68,32 +70,114 @@ using ilkDeneme.DTOs;
 
         // POST: api/Tasinmaz
         [HttpPost]
-            public async Task<ActionResult<Tasinmaz>> PostTasinmaz(Tasinmaz tasinmaz)
+        [Authorize(Roles = "Admin, User")] // Sadece Admin ve User rollerine sahip kullanıcıların erişimi
+        public async Task<ActionResult<Tasinmaz>> PostTasinmaz(Tasinmaz tasinmaz)
+        {
+            var kullaniciId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+
+            try
             {
-                var newTasinmaz = await _tasinmazService.AddTasinmazAsync(tasinmaz);
+                // Taşınmazı ekleme işlemi
+                var newTasinmaz = await _tasinmazService.AddTasinmazAsync(tasinmaz, kullaniciId, ipAddress);
                 return CreatedAtAction(nameof(GetTasinmaz), new { id = newTasinmaz.TasinmazId }, newTasinmaz);
             }
-
-            // PUT: api/Tasinmaz/5
-            [HttpPut("{id}")]
-            public async Task<IActionResult> PutTasinmaz(int id, Tasinmaz tasinmaz)
+            catch (ArgumentNullException ex)
             {
-                if (id != tasinmaz.TasinmazId)
+                // Özellikle geçersiz veri durumları için uygun bir yanıt döndürün
+                await _loggingService.LogAction(kullaniciId, 2, 1, $"Invalid data: {ex.Message}", ipAddress);
+                return BadRequest($"Invalid data: {ex.Message}");
+            }
+            catch (ArgumentException ex)
+            {
+                // Eksik veya hatalı veri durumları için uygun bir yanıt döndürün
+                await _loggingService.LogAction(kullaniciId, 2, 1, $"Invalid property data: {ex.Message}", ipAddress);
+                return BadRequest($"Invalid property data: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                // Genel hata durumunda uygun bir yanıt döndürün
+                await _loggingService.LogAction(kullaniciId, 2, 1, $"Internal server error: {ex.Message}", ipAddress);
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+
+
+
+        // PUT: api/Tasinmaz/5
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin, User")]
+        public async Task<IActionResult> PutTasinmaz(int id, Tasinmaz tasinmaz)
+        {
+            if (id != tasinmaz.TasinmazId)
+            {
+                return BadRequest("Property ID mismatch.");
+            }
+
+            var kullaniciId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+            var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            try
+            {
+                if (userRole == "User")
                 {
-                    return BadRequest();
+                    var existingTasinmaz = await _tasinmazService.GetTasinmazByIdAsync(id);
+                    if (existingTasinmaz == null || existingTasinmaz.KullaniciId != kullaniciId)
+                    {
+                        return Unauthorized("You are not authorized to update this property.");
+                    }
                 }
-                await _tasinmazService.UpdateTasinmazAsync(tasinmaz);
+
+                var updatedTasinmaz = await _tasinmazService.UpdateTasinmazAsync(tasinmaz, kullaniciId, ipAddress);
+
+                // Loglama işlemi başarılı olduğunda
+                await _loggingService.LogAction(kullaniciId, 1, 2, $"Updated property with ID {id}", ipAddress);
+
                 return NoContent();
+            }
+            catch (Exception ex)
+            {
+                // Loglama işlemi başarısız olduğunda
+                await _loggingService.LogAction(kullaniciId, 2, 2, $"Failed to update property with ID {id} - Error: {ex.Message}", ipAddress);
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+
+
+
+
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin, User")] // Sadece Admin ve User rollerine sahip kullanıcıların erişimi
+        public async Task<IActionResult> DeleteTasinmaz(int id)
+        {
+            var kullaniciId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+            var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            // Eğer kullanıcı User rolündeyse, sadece kendi taşınmazını silebilir
+            if (userRole == "User")
+            {
+                var tasinmaz = await _tasinmazService.GetTasinmazByIdAsync(id);
+                if (tasinmaz == null || tasinmaz.KullaniciId != kullaniciId)
+                {
+                    return Unauthorized("You are not authorized to delete this property.");
+                }
             }
 
-            // DELETE: api/Tasinmaz/5
-            [HttpDelete("{id}")]
-            public async Task<IActionResult> DeleteTasinmaz(int id)
-            {
-                await _tasinmazService.DeleteTasinmazAsync(id);
-                return NoContent();
-            }
+            await _tasinmazService.DeleteTasinmazAsync(id, kullaniciId, ipAddress);
+            return NoContent();
+        }
+
+
+        // DELETE: api/Tasinmaz/tasinmazlar
         [HttpDelete("tasinmazlar")]
+        [Authorize(Roles = "Admin, User")] // Sadece Admin ve User rollerine sahip kullanıcıların erişimi
         public async Task<IActionResult> DeleteTasinmazlar([FromBody] List<int> ids)
         {
             if (ids == null || !ids.Any())
@@ -101,10 +185,24 @@ using ilkDeneme.DTOs;
                 return BadRequest("No ids provided");
             }
 
-            await _tasinmazService.DeleteTasinmazlarAsync(ids);
+            var kullaniciId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+            var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
+            // Eğer kullanıcı User rolündeyse, sadece kendi taşınmazlarını silebilir
+            if (userRole == "User")
+            {
+                var tasinmazlar = await _tasinmazService.GetByKullaniciIdAsync(kullaniciId);
+                if (!tasinmazlar.All(t => ids.Contains(t.TasinmazId)))
+                {
+                    return Unauthorized("You are not authorized to delete some of these properties.");
+                }
+            }
+
+            await _tasinmazService.DeleteTasinmazlarAsync(ids, kullaniciId, ipAddress);
             return NoContent();
         }
+
 
         [HttpGet("GetAllProperties")]
         [Authorize]
