@@ -177,14 +177,47 @@ namespace ilkDeneme.Services
          }*/
 
 
-        public async Task<IEnumerable<Tasinmaz>> GetByKullaniciIdAsync(int kullaniciId)
+        public async Task<IEnumerable<Tasinmaz>> GetByKullaniciIdAsync(int kullaniciId, string ilAd = null, string ilceAd = null, string mahalleAd = null, string ada = null, string parsel = null, string nitelik = null)
         {
-            return await _context.Tasinmazlar
-                .Include(t => t.Mahalle) // Mahalle bilgilerini dahil et
-                .ThenInclude(m => m.Ilce) // Ilce bilgilerini dahil et
-                .ThenInclude(i => i.Il)   // Il bilgilerini dahil et
-                .Where(t => t.KullaniciId == kullaniciId)
-                .ToListAsync();
+            var query = _context.Tasinmazlar
+                .Include(t => t.Mahalle)
+                    .ThenInclude(m => m.Ilce)
+                        .ThenInclude(i => i.Il)
+                .Where(t => t.KullaniciId == kullaniciId);
+
+            if (!string.IsNullOrEmpty(ilAd))
+            {
+                query = query.Where(t => t.Mahalle.Ilce.Il.IlAdi.Contains(ilAd));
+            }
+
+            if (!string.IsNullOrEmpty(ilceAd))
+            {
+                query = query.Where(t => t.Mahalle.Ilce.IlceAdi.Contains(ilceAd));
+            }
+
+            if (!string.IsNullOrEmpty(mahalleAd))
+            {
+                query = query.Where(t => t.Mahalle.MahalleAdi.Contains(mahalleAd));
+            }
+
+            if (!string.IsNullOrEmpty(ada))
+            {
+                query = query.Where(t => t.Ada.Contains(ada));
+            }
+
+            if (!string.IsNullOrEmpty(parsel))
+            {
+                query = query.Where(t => t.Parsel.Contains(parsel));
+            }
+
+            if (!string.IsNullOrEmpty(nitelik))
+            {
+                query = query.Where(t => t.Nitelik.Contains(nitelik));
+            }
+
+            return await query.ToListAsync();
         }
+
+
     }
 }

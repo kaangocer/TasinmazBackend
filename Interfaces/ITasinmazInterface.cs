@@ -14,7 +14,15 @@ namespace ilkDeneme.Services
         Task DeleteTasinmazAsync(int id, int kullaniciId, string ipAddress);
         Task DeleteTasinmazlarAsync(List<int> ids, int kullaniciId, string ipAddress);
 
-        Task<IEnumerable<Tasinmaz>> GetByKullaniciIdAsync(int kullaniciId);
-
+        Task<IEnumerable<Tasinmaz>> GetByKullaniciIdAsync(
+            int kullaniciId,
+            string ilAd = null,
+            string ilceAd = null,
+            string mahalleAd = null,
+            string ada = null,
+            string parsel = null,
+            string nitelik = null);
     }
+
+
 }

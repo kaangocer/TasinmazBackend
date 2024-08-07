@@ -50,13 +50,25 @@ using Microsoft.AspNetCore.Http;
             }
 
         [HttpGet("GetByKullaniciId")]
-        public async Task<IActionResult> GetByKullaniciId(int id)
+        [Authorize(Roles = "Admin, User")]
+        public async Task<IActionResult> GetByKullaniciId(int id, string ilAd = null, string ilceAd = null, string mahalleAd = null, string ada = null, string parsel = null, string nitelik = null)
         {
-           
-            var tasinmazlar = await _tasinmazService.GetByKullaniciIdAsync(id);
+            // Kullanıcının kimliğini ve rolünü almak için JWT'den Claims bilgilerini okuyun
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
-            return Ok(tasinmazlar);
+            // Kullanıcı rolü kontrolü
+            if (userRole == "Admin" || id == userId)
+            {
+                var tasinmazlar = await _tasinmazService.GetByKullaniciIdAsync(id, ilAd, ilceAd, mahalleAd, ada, parsel, nitelik);
+                return Ok(tasinmazlar);
+            }
+            else
+            {
+                return Forbid(); // 403 Forbidden
+            }
         }
+
 
 
 
@@ -206,7 +218,14 @@ using Microsoft.AspNetCore.Http;
 
         [HttpGet("GetAllProperties")]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<TasinmazDTO>>> GetAllProperties()
+        public async Task<ActionResult<IEnumerable<TasinmazDTO>>> GetAllProperties(
+    [FromQuery] string ilAd = null,
+    [FromQuery] string ilceAd = null,
+    [FromQuery] string mahalleAd = null,
+    [FromQuery] string ada = null,
+    [FromQuery] string parsel = null,
+    [FromQuery] string nitelik = null,
+    [FromQuery] int? kullaniciId = null)
         {
             // Kullanıcı kimlik ve rol bilgilerini JWT'den al
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -236,6 +255,42 @@ using Microsoft.AspNetCore.Http;
                 else
                 {
                     tasinmazlar = await _tasinmazService.GetByKullaniciIdAsync(userId);
+                }
+
+                // Filtreleme işlemi
+                if (!string.IsNullOrEmpty(ilAd))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Mahalle?.Ilce?.Il?.IlAdi.Contains(ilAd, StringComparison.OrdinalIgnoreCase) == true);
+                }
+
+                if (!string.IsNullOrEmpty(ilceAd))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Mahalle?.Ilce?.IlceAdi.Contains(ilceAd, StringComparison.OrdinalIgnoreCase) == true);
+                }
+
+                if (!string.IsNullOrEmpty(mahalleAd))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Mahalle?.MahalleAdi.Contains(mahalleAd, StringComparison.OrdinalIgnoreCase) == true);
+                }
+
+                if (!string.IsNullOrEmpty(ada))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Ada.Contains(ada, StringComparison.OrdinalIgnoreCase));
+                }
+
+                if (!string.IsNullOrEmpty(parsel))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Parsel.Contains(parsel, StringComparison.OrdinalIgnoreCase));
+                }
+
+                if (!string.IsNullOrEmpty(nitelik))
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.Nitelik.Contains(nitelik, StringComparison.OrdinalIgnoreCase));
+                }
+
+                if (kullaniciId.HasValue)
+                {
+                    tasinmazlar = tasinmazlar.Where(t => t.KullaniciId == kullaniciId.Value);
                 }
 
                 // Taşınmazları DTO'lara dönüştür
@@ -273,7 +328,7 @@ using Microsoft.AspNetCore.Http;
             {
                 // Log exception
                 //_logger.LogError(ex, "An error occurred while retrieving properties.");
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
             }
         }
 
