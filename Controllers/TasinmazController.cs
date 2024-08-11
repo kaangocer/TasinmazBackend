@@ -134,6 +134,7 @@ using Microsoft.AspNetCore.Http;
 
             try
             {
+                // Kullanıcı rolü kontrolü
                 if (userRole == "User")
                 {
                     var existingTasinmaz = await _tasinmazService.GetTasinmazByIdAsync(id);
@@ -143,10 +144,15 @@ using Microsoft.AspNetCore.Http;
                     }
                 }
 
+                // Güncellenmiş taşınmaz bilgilerini güncelleme
                 var updatedTasinmaz = await _tasinmazService.UpdateTasinmazAsync(tasinmaz, kullaniciId, ipAddress);
 
-                // Loglama işlemi başarılı olduğunda
-                await _loggingService.LogAction(kullaniciId, 1, 2, $"Updated property with ID {id}", ipAddress);
+                // Güncellenmiş verileri kontrol edin (isteğe bağlı)
+                var result = await _tasinmazService.GetTasinmazByIdAsync(id);
+                if (result == null)
+                {
+                    return NotFound("Property not found.");
+                }
 
                 return NoContent();
             }
@@ -157,6 +163,7 @@ using Microsoft.AspNetCore.Http;
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
             }
         }
+
 
 
 

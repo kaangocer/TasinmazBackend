@@ -10,4 +10,5 @@ public interface IUserService
     Task AddUserAsync(UserDTO userDto);
     Task UpdateUserAsync(UserDTO userDto);
     Task<User> GetUserByIdAsync(int id);
+    
 }

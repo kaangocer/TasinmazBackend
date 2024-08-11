@@ -106,7 +106,7 @@ public class UserController : ControllerBase
             return StatusCode(500, new { message = $"Internal server error: {ex.Message}" });
         }
     }
-
+    
 
 
 

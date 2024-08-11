@@ -1,0 +1,1872 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.10.0.0",
+        "fileVersion": "4.10.0-3.24216.12 (3af0081a)",
+        "semanticVersion": "4.10.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8632",
+          "level": "warning",
+          "message": "The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/LogFilterDTO.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 18,
+                  "endLine": 10,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/appsettings.json",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 34,
+                  "endLine": 8,
+                  "endColumn": 102
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 330,
+                  "startColumn": 17,
+                  "endLine": 330,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Services/TasinmazService.cs",
+                "region": {
+                  "startLine": 173,
+                  "startColumn": 1,
+                  "endLine": 173,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Startup.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 1,
+                  "endLine": 59,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'ApplicationDbContext' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DataAccess/DataContext.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 14,
+                  "endLine": 4,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'LogFilterDTO' to match pascal case naming rules, consider using 'LogFilterDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/LogFilterDTO.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 14,
+                  "endLine": 5,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'LogFilterDTO' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/LogFilterDTO.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 14,
+                  "endLine": 5,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'ILoggingService' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Interfaces/ILoggingService.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 18,
+                  "endLine": 3,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'IUserService' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Interfaces/IUsersService.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'LoggingService' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Services/LoggingService.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 14,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'LogService' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Services/LogService.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 14,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'UserService' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Services/UserService.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 14,
+                  "endLine": 9,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Interfaces/AuthRepository.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 37,
+                  "endLine": 13,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_logger' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/WeatherForecastController.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 61,
+                  "endLine": 19,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3903",
+          "level": "warning",
+          "message": "Move 'UserController' into a named namespace.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/UserController.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 14,
+                  "endLine": 12,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Program.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TasinmazDTO' to match pascal case naming rules, consider using 'TasinmazDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/TasinmazDTO.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 18,
+                  "endLine": 3,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MahalleDTO' to match pascal case naming rules, consider using 'MahalleDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/TasinmazDTO.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 18,
+                  "endLine": 15,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Npgsql:ValueGenerationStrategy' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 37,
+                  "endLine": 15,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 37,
+                  "endLine": 28,
+                  "endColumn": 69
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 37,
+                  "endLine": 48,
+                  "endColumn": 69
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 37,
+                  "endLine": 68,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Ilceler' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 23,
+                  "endLine": 24,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 41,
+                  "endLine": 58,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 24,
+                  "endLine": 89,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 23,
+                  "endLine": 112,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Mahalleler' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 23,
+                  "endLine": 44,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 41,
+                  "endLine": 82,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 24,
+                  "endLine": 94,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240723160255_InitialCreate.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 23,
+                  "endLine": 109,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'IlceDTO' to match pascal case naming rules, consider using 'IlceDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/TasinmazDTO.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 18,
+                  "endLine": 23,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Tasinmazlar' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240724074814_UserEklendi.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 24,
+                  "endLine": 29,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240724074814_UserEklendi.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 24,
+                  "endLine": 34,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240724074814_UserEklendi.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 24,
+                  "endLine": 45,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240724074814_UserEklendi.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 24,
+                  "endLine": 52,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'IlDTO' to match pascal case naming rules, consider using 'IlDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/TasinmazDTO.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 18,
+                  "endLine": 31,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IslemTipleri' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 24,
+                  "endLine": 43,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 24,
+                  "endLine": 48,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 24,
+                  "endLine": 53,
+                  "endColumn": 38
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 24,
+                  "endLine": 58,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'IslemTipId' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 34,
+                  "endLine": 20,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 28,
+                  "endLine": 44,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 28,
+                  "endLine": 49,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 28,
+                  "endLine": 54,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Migrations/20240730122136_LogTableModelBuilder.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 28,
+                  "endLine": 59,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'UserDTO' to match pascal case naming rules, consider using 'UserDto'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/DTOs/UserDTO.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 18,
+                  "endLine": 3,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Startup.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 25,
+                  "endLine": 53,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6781",
+          "level": "warning",
+          "message": "JWT secret keys should not be disclosed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Startup.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 28,
+                  "endLine": 95,
+                  "endColumn": 113
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'key'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Startup.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 17,
+                  "endLine": 32,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2245",
+          "level": "warning",
+          "message": "Make sure that using this pseudorandom number generator is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/WeatherForecastController.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 23,
+                  "endLine": 29,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Tasinmaz.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 20,
+                  "endLine": 15,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Tasinmaz.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 20,
+                  "endLine": 23,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/User.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 20,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Tasinmaz.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 20,
+                  "endLine": 30,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Mahalle.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 20,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Mahalle.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 20,
+                  "endLine": 11,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Ilce.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 20,
+                  "endLine": 9,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Ilce.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 20,
+                  "endLine": 11,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Il.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 20,
+                  "endLine": 6,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'updatedTasinmaz'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 21,
+                  "endLine": 146,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 221,
+                  "startColumn": 67,
+                  "endLine": 221,
+                  "endColumn": 83
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 235,
+                  "startColumn": 13,
+                  "endLine": 235,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 235,
+                  "startColumn": 51,
+                  "endLine": 235,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 241,
+                  "startColumn": 13,
+                  "endLine": 241,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 251,
+                  "startColumn": 17,
+                  "endLine": 251,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 255,
+                  "startColumn": 17,
+                  "endLine": 255,
+                  "endColumn": 21
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 17,
+                  "endLine": 261,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 266,
+                  "startColumn": 17,
+                  "endLine": 266,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 271,
+                  "startColumn": 17,
+                  "endLine": 271,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 276,
+                  "startColumn": 17,
+                  "endLine": 276,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 281,
+                  "startColumn": 17,
+                  "endLine": 281,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 286,
+                  "startColumn": 17,
+                  "endLine": 286,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 291,
+                  "startColumn": 17,
+                  "endLine": 291,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 306,
+                  "startColumn": 49,
+                  "endLine": 306,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 311,
+                  "startColumn": 55,
+                  "endLine": 311,
+                  "endColumn": 56
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 316,
+                  "startColumn": 60,
+                  "endLine": 316,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 327,
+                  "startColumn": 13,
+                  "endLine": 327,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "10": "+1",
+              "11": "+1",
+              "12": "+2 (incl 1 for nesting)",
+              "13": "+3 (incl 2 for nesting)",
+              "14": "+4 (incl 3 for nesting)",
+              "15": "+1",
+              "2": "+1",
+              "3": "+1",
+              "4": "+1",
+              "5": "+1",
+              "6": "+1",
+              "7": "+1",
+              "8": "+1",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Helpers/JwtExtension.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 13,
+                  "endLine": 10,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3358",
+          "level": "warning",
+          "message": "Extract this nested ternary operation into an independent statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 311,
+                  "startColumn": 32,
+                  "endLine": 321,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3358",
+          "level": "warning",
+          "message": "Extract this nested ternary operation into an independent statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Controllers/TasinmazController.cs",
+                "region": {
+                  "startLine": 316,
+                  "startColumn": 34,
+                  "endLine": 320,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'username' to 'Email' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Interfaces/AuthRepository.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 46,
+                  "endLine": 43,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'userName' to 'Email' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Interfaces/AuthRepository.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 51,
+                  "endLine": 76,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Log.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 20,
+                  "endLine": 7,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Log.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 20,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Log.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 20,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Log.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 20,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/karik/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/ilkDeneme/ilkDeneme/Entities/Concrete/Log.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 25,
+                  "endLine": 12,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8632": {
+          "id": "CS8632",
+          "shortDescription": "The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8632)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1104": {
+          "id": "S1104",
+          "shortDescription": "Fields should not have public accessibility",
+          "fullDescription": "Public fields in public classes do not respect the encapsulation principle and have three main disadvantages:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1104",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "An unused local variable is a variable that has been declared but is not used anywhere in the block of code where it is defined. It is dead code, contributing to unnecessary complexity and leading to confusion when reading the code. Therefore, it should be removed from your code to maintain clarity and efficiency.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Hard-coded credentials are security-sensitive",
+          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "properties": {
+            "category": "Blocker Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2245": {
+          "id": "S2245",
+          "shortDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive",
+          "fullDescription": "Using pseudorandom number generators (PRNGs) is security-sensitive. For example, it has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2245",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3358": {
+          "id": "S3358",
+          "shortDescription": "Ternary operators should not be nested",
+          "fullDescription": "Nested ternaries are hard to read and can make the order of operations complex to understand.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3358",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3776": {
+          "id": "S3776",
+          "shortDescription": "Cognitive Complexity of methods should not be too high",
+          "fullDescription": "This rule raises an issue when the code cognitive complexity of a function is above a certain threshold.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3776",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3903": {
+          "id": "S3903",
+          "shortDescription": "Types should be defined in named namespaces",
+          "fullDescription": "Types are declared in namespaces in order to prevent name collisions and as a way to organize them into the object hierarchy. Types that are defined outside any named namespace are in a global namespace that cannot be referenced in code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3903",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5122": {
+          "id": "S5122",
+          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5122",
+          "properties": {
+            "category": "Minor Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6781": {
+          "id": "S6781",
+          "shortDescription": "JWT secret keys should not be disclosed",
+          "fullDescription": "Secret leaks often occur when a sensitive piece of authentication data is stored with the source code of an application. Considering the source code is intended to be deployed across multiple assets, including source code repositories or application hosting servers, the secrets might get exposed to an unintended audience.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6781",
+          "properties": {
+            "category": "Blocker Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6964": {
+          "id": "S6964",
+          "shortDescription": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "fullDescription": "\"Under-posting\" refers to a situation where a client sends less data than expected to the server during an HTTP request, for example when the client omits some properties from the request body that the server expects to receive.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6964",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "Parameters are part of the method signature and its identity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
