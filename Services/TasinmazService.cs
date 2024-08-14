@@ -40,7 +40,7 @@ namespace ilkDeneme.Services
         {
             if (tasinmaz == null)
             {
-                var errorMessage = "Property data is null.";
+                var errorMessage = "Alanlar boş olamaz!";
                 await _loggingService.LogAction(kullaniciId, 2, 1, errorMessage, ipAddress);
                 throw new ArgumentNullException(nameof(tasinmaz), errorMessage);
             }
@@ -49,7 +49,7 @@ namespace ilkDeneme.Services
             if (string.IsNullOrEmpty(tasinmaz.Ada) || string.IsNullOrEmpty(tasinmaz.Parsel) ||
                 string.IsNullOrEmpty(tasinmaz.Nitelik) || string.IsNullOrEmpty(tasinmaz.KoordinatBilgileri))
             {
-                var errorMessage = "Property data is incomplete. Ada, Parsel, Nitelik, and KoordinatBilgileri are required.";
+                var errorMessage = "Alanlar boş olmamalı ! Ada, Parsel, Nitelik ve KoordinatBilgileri";
                 await _loggingService.LogAction(kullaniciId, 2, 1, errorMessage, ipAddress);
                 throw new ArgumentException(errorMessage);
             }
@@ -90,6 +90,15 @@ namespace ilkDeneme.Services
 
             try
             {
+                // Veritabanındaki mevcut en yüksek tasinmazId'yi bul
+                var maxTasinmazId = await _context.Tasinmazlar
+                    .OrderByDescending(t => t.TasinmazId)
+                    .Select(t => t.TasinmazId)
+                    .FirstOrDefaultAsync();
+
+                // Yeni tasinmazId'yi belirle
+                tasinmaz.TasinmazId = maxTasinmazId + 1;
+
                 _context.Tasinmazlar.Add(tasinmaz);
                 await _context.SaveChangesAsync();
 
@@ -128,12 +137,13 @@ namespace ilkDeneme.Services
 
 
 
+
         // Taşınmazı güncelle
         public async Task<Tasinmaz> UpdateTasinmazAsync(Tasinmaz tasinmaz, int kullaniciId, string ipAddress)
         {
             if (tasinmaz == null)
             {
-                var errorMessage = "Property data is null.";
+                var errorMessage = "Alanlar boş olamaz !";
                 await _loggingService.LogAction(kullaniciId, 2, 2, errorMessage, ipAddress);
                 throw new ArgumentNullException(nameof(tasinmaz), errorMessage);
             }
@@ -141,7 +151,7 @@ namespace ilkDeneme.Services
             if (string.IsNullOrEmpty(tasinmaz.Ada) || string.IsNullOrEmpty(tasinmaz.Parsel) ||
                 string.IsNullOrEmpty(tasinmaz.Nitelik) || string.IsNullOrEmpty(tasinmaz.KoordinatBilgileri))
             {
-                var errorMessage = "Property data is incomplete. Ada, Parsel, Nitelik, and KoordinatBilgileri are required.";
+                var errorMessage = "Alanlar boş olmamalı ! Ada, Parsel, Nitelik ve KoordinatBilgileri";
                 await _loggingService.LogAction(kullaniciId, 2, 2, errorMessage, ipAddress);
                 throw new ArgumentException(errorMessage);
             }

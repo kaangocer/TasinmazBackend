@@ -33,8 +33,8 @@ namespace ilkDeneme.Controllers
         {
             if (await _authRepository.UserExists(userForRegisterDto.Email))
             {
-                await _loggingService.LogAction(0, 2, 1, "Email already exists", HttpContext.Connection.RemoteIpAddress?.ToString());
-                return BadRequest("Email already exists");
+                await _loggingService.LogAction(0, 2, 1, "Bu email kullanılmakta!", HttpContext.Connection.RemoteIpAddress?.ToString());
+                return BadRequest("Bu email kullanılmakta!");
             }
 
             var userToCreate = new User
@@ -46,7 +46,7 @@ namespace ilkDeneme.Controllers
             var createdUser = await _authRepository.Register(userToCreate, userForRegisterDto.Password);
 
             // Log successful registration
-            await _loggingService.LogAction(createdUser.KullaniciId, 1, 1, "User registered successfully", HttpContext.Connection.RemoteIpAddress?.ToString());
+            await _loggingService.LogAction(createdUser.KullaniciId, 1, 1, "Kullanıcı kaydı başarılı", HttpContext.Connection.RemoteIpAddress?.ToString());
 
             return StatusCode(201);
         }
@@ -57,8 +57,8 @@ namespace ilkDeneme.Controllers
             var user = await _authRepository.Login(userForLoginDto.Email, userForLoginDto.Password);
             if (user == null)
             {
-                await _loggingService.LogAction(0, 2, 4, "Failed login attempt", HttpContext.Connection.RemoteIpAddress?.ToString());
-                return Unauthorized("Invalid login attempt");
+                await _loggingService.LogAction(0, 2, 4, "Başarısız giriş", HttpContext.Connection.RemoteIpAddress?.ToString());
+                return Unauthorized("Geçersiz giriş");
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -67,10 +67,10 @@ namespace ilkDeneme.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[] {
-                    new Claim(ClaimTypes.NameIdentifier, user.KullaniciId.ToString()),
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role ?? string.Empty)
-                }),
+            new Claim(ClaimTypes.NameIdentifier, user.KullaniciId.ToString()),
+            new Claim(ClaimTypes.Name, user.Email),
+            new Claim(ClaimTypes.Role, user.Role ?? string.Empty)
+        }),
                 Expires = DateTime.Now.AddDays(1),
                 Issuer = _configuration["AppSettings:Issuer"],
                 Audience = _configuration["AppSettings:Audience"],
@@ -80,10 +80,10 @@ namespace ilkDeneme.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // Log successful login
-            await _loggingService.LogAction(user.KullaniciId, 1, 4, "User logged in", HttpContext.Connection.RemoteIpAddress?.ToString());
+            // Log successful login with email
+            await _loggingService.LogAction(user.KullaniciId, 1, 4, $"{user.Email} giriş yaptı!", HttpContext.Connection.RemoteIpAddress?.ToString());
 
             return Ok(new { token = tokenString });
         }
     }
-}
+    }
